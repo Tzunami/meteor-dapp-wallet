@@ -400,8 +400,12 @@ observeTransactions = function(){
             if(!newDocument.exchangeRates || 
                !newDocument.exchangeRates.btc ||
                !newDocument.exchangeRates.usd ||
+			   !newDocument.exchangeRates.cny ||
+			   !newDocument.exchangeRates.gpy ||
+			   !newDocument.exchangeRates.jpy ||
+			   !newDocument.exchangeRates.cad ||
                !newDocument.exchangeRates.eur) {
-                HTTP.get('https://www.cryptocompare.com/api/data/pricehistorical?fsym=ETH&tsyms=BTC,USD,EUR&ts='+ newDocument.timestamp, function(e, res){
+                HTTP.get('https://www.cryptocompare.com/api/data/pricehistorical?fsym=ETH&tsyms=BTC,USD,EUR,CAD,JPY,GBP&ts='+ newDocument.timestamp, function(e, res){
 
                     if(!e && res && res.statusCode === 200) {
                         var content = JSON.parse(res.content);

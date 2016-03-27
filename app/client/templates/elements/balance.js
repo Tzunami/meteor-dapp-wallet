@@ -29,7 +29,8 @@ Template['elements_balance'].helpers({
         if (EthTools.getUnit() === 'noether') return 'infinite';
 
         if(balance){
-            if(EthTools.getUnit() === 'usd' || EthTools.getUnit() === 'eur')
+            if(EthTools.getUnit() === 'usd' || EthTools.getUnit() === 'eur' || EthTools.getUnit() == 'cad'
+			   || EthTools.getUnit() == 'gbp' || EthTools.getUnit() == 'jpy')
                 return EthTools.formatBalance(TemplateVar.get('balance'), '0,0.00');
             else if(EthTools.getUnit() === 'ether')
                 return EthTools.formatBalance(TemplateVar.get('balance'), '0,0.00[0000000000000000]');
