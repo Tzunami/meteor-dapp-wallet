@@ -20,18 +20,18 @@ selectableUnits = [{
     text: 'EARTH',
     value: 'ether'
 },
-/*{	
+{	
     text: 'ETHER',
     value: 'ether'
-},*/
+},
 {
     text: 'BTC',
     value: 'btc'
 },
-/*{
+{
     text: 'CDN',
     value: 'cad'
-},*/				   
+},				   
 {
     text: 'USD',
     value: 'usd'
